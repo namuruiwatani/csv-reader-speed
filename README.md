@@ -43,3 +43,4 @@ leading BOM, NUL and control characters.
 
 MIT — see [LICENSE](LICENSE). The reference reader it is compared against is make.fun's own
 csv-reader 1.0.0 (MIT), derived from d3-dsv (ISC) and papaparse (MIT); no code from it is used here.
+
