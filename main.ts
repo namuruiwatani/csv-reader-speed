@@ -8,10 +8,8 @@ import { join } from 'node:path';
 import { setFlagsFromString } from 'node:v8';
 
 // V8's incremental marking off, set before solve.js is imported: the house baseline runs with it, and an
-// entry may tune V8's flags the same way. TurboFan's background compilation costs more CPU than it saves
-// on a run this short, so the entry stays in the interpreter.
+// entry may tune V8's flags the same way.
 setFlagsFromString('--no-incremental-marking');
-setFlagsFromString('--no-opt');
 
 const { run } = (await import(new URL('./solve.js', import.meta.url).href)) as { run: (input: unknown) => unknown };
 
